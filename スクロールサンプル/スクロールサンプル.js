@@ -519,7 +519,7 @@ if (reversed == null) { reversed = false; }
 		var canScrollVertically = true; // 縦スクロール 可否
 		
 		// 減衰値パラメータ 1に近づくほど慣性が強い
-		var damping = 0.95;
+		var damping = 0.99;
 		
 		var logEnabe = false; //デバッグ表示 可否
 		
