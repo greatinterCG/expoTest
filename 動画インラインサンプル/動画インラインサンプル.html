@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" >
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>動画インラインサンプル</title>
+<!-- write your code here -->
+<style>
+	html, body {
+		overflow: hidden;
+		width: 100%;
+	} 
+	#dom_overlay_container, #canvas, #animation_container {
+		width: 100% !important;
+		height: auto !important;
+	}
+</style>
+<style>
+	body {
+		-webkit-user-select: none; /* Safari */
+		-moz-user-select: none;    /* Firefox */
+		-ms-user-select: none;     /* Internet Explorer/Edge */
+		user-select: none;         /* Standard */
+	}
+</style>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+(function (cjs, an) {
+var p; // shortcut to reference prototypes
+var lib={};var ss={};var img={};
+lib.ssMetadata = [];
+(lib.AnMovieClip = function(){
+	this.actionFrames = [];
+	this.ignorePause = false;
+	this.gotoAndPlay = function(positionOrLabel){
+		cjs.MovieClip.prototype.gotoAndPlay.call(this,positionOrLabel);
+	}
+	this.play = function(){
+		cjs.MovieClip.prototype.play.call(this);
+	}
+	this.gotoAndStop = function(positionOrLabel){
+		cjs.MovieClip.prototype.gotoAndStop.call(this,positionOrLabel);
+	}
+	this.stop = function(){
+		cjs.MovieClip.prototype.stop.call(this);
+	}
+}).prototype = p = new cjs.MovieClip();
+// symbols:
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.再生ボタン = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFCC").s().p("Al7F8IAAr3IL3AAIAAL3g");
+	this.shape.setTransform(37,37);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.再生ボタン, new cjs.Rectangle(-1,-1,76,76), null);
+(lib.an_Video = function(options) {
+	this.initialize();
+	this._element = new $.an.Video(options);
+	this._el = this._element.create();
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,400,300);
+p._tick = _tick;
+p._handleDrawEnd = _handleDrawEnd;
+p._updateVisibility = _updateVisibility;
+p.draw = _componentDraw;
+// stage content:
+(lib.動画インラインサンプル = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {start:0};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	this.actionFrames = [0,1];
+	// timeline functions:
+	this.frame_0 = function() {
+		this.play();
+		// ビデオプレーヤーのz-indexを設定
+		var dom_container = document.getElementById("dom_overlay_container");
+		dom_container.style.zIndex = -1;
+		////スマホドラッグ有効
+		//createjs.Touch.enable(stage, false, true);
+		////タップ有効、expo3本指長押し無効
+		//stage.preventSelection = true;
+		this.playButton.addEventListener("click", fl_MouseClickHandler.bind(this));
+		function fl_MouseClickHandler() {
+			$("#movieClip_4")[0].play();
+		}
+	}
+	this.frame_1 = function() {
+		this.stop();
+		//$("#video")[0].setAttribute("playsinline", "");
+		addAttributesToVideo();
+		function addAttributesToVideo() {
+		    var videoElement = document.getElementById("movieClip_4");
+		    videoElement.setAttribute("playsinline", "");
+		    videoElement.setAttribute("webkit-playsinline", "");
+		    // 属性が正常に追加されたかどうかを確認
+		    if (videoElement.hasAttribute("playsinline") && videoElement.hasAttribute("webkit-playsinline")) {
+		        alert("playsinline および webkit-playsinline 属性が正常に追加されました！");
+		    } else {
+		        alert("属性の追加に失敗しました。");
+		    }
+		}
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// レイヤー_2
+	this.playButton = new lib.再生ボタン();
+	this.playButton.name = "playButton";
+	this.playButton.setTransform(456.15,708.4,2.814,2.814,0,0,0,0,0.1);
+	this.timeline.addTween(cjs.Tween.get(this.playButton).wait(2));
+	// レイヤー_1
+	this.movieClip_4 = new lib.an_Video({'id': 'movieClip_4', 'src':'videos/ocean_conv3m-mp4.mp4', 'autoplay':false, 'controls':true, 'muted':true, 'loop':true, 'poster':'', 'preload':true, 'class':'video'});
+	this.movieClip_4.name = "movieClip_4";
+	this.movieClip_4.setTransform(560.05,1190.15,2.22,3.96,0,0,0,200,150);
+	this.timeline.addTween(cjs.Tween.get(this.movieClip_4).wait(2));
+	this._renderFirstFrame();
+}).prototype = p = new lib.AnMovieClip();
+p.nominalBounds = new cjs.Rectangle(704.5,1872.2,300.70000000000005,-86.10000000000014);
+// library properties:
+lib.properties = {
+	id: '84287BB20D864EDDBDE84934698B6EDF',
+	width: 1179,
+	height: 2556,
+	fps: 30,
+	color: "#FFFFFF",
+	opacity: 0.00,
+	manifest: [
+		{src:"https://code.jquery.com/jquery-3.4.1.min.js", id:"lib/jquery-3.4.1.min.js"},
+		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
+		{src:"components/video/src/video.js", id:"an.Video"}
+	],
+	preloads: []
+};
+// bootstrap callback support:
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+an.compositions = an.compositions || {};
+an.compositions['84287BB20D864EDDBDE84934698B6EDF'] = {
+	getStage: function() { return exportRoot.stage; },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+	var lastW, lastH, lastS=1;		
+	window.addEventListener('resize', resizeCanvas);		
+	resizeCanvas();		
+	function resizeCanvas() {			
+		var w = lib.properties.width, h = lib.properties.height;			
+		var iw = window.innerWidth, ih=window.innerHeight;			
+		var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+		if(isResp) {                
+			if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+				sRatio = lastS;                
+			}				
+			else if(!isScale) {					
+				if(iw<w || ih<h)						
+					sRatio = Math.min(xRatio, yRatio);				
+			}				
+			else if(scaleType==1) {					
+				sRatio = Math.min(xRatio, yRatio);				
+			}				
+			else if(scaleType==2) {					
+				sRatio = Math.max(xRatio, yRatio);				
+			}			
+		}
+		domContainers[0].width = w * pRatio * sRatio;			
+		domContainers[0].height = h * pRatio * sRatio;
+		domContainers.forEach(function(container) {				
+			container.style.width = w * sRatio + 'px';				
+			container.style.height = h * sRatio + 'px';			
+		});
+		stage.scaleX = pRatio*sRatio;			
+		stage.scaleY = pRatio*sRatio;
+		lastW = iw; lastH = ih; lastS = sRatio;            
+		stage.tickOnUpdate = false;            
+		stage.update();            
+		stage.tickOnUpdate = true;		
+	}
+}
+function _updateVisibility(evt) {
+	var parent = this.parent;
+	var detach = this.stage == null || this._off || !parent;
+	while(parent) {
+		if(parent.visible) {
+			parent = parent.parent;
+		}
+		else{
+			detach = true;
+			break;
+		}
+	}
+	detach = detach && this._element && this._element._attached;
+	if(detach) {
+		this._element.detach();
+		this.dispatchEvent('detached');
+		stage.removeEventListener('drawstart', this._updateVisibilityCbk);
+		this._updateVisibilityCbk = false;
+	}
+}
+function _handleDrawEnd(evt) {
+	if(this._element && this._element._attached) {
+		var props = this.getConcatenatedDisplayProps(this._props), mat = props.matrix;
+		var tx1 = mat.decompose(); var sx = tx1.scaleX; var sy = tx1.scaleY;
+		var dp = window.devicePixelRatio || 1; var w = this.nominalBounds.width * sx; var h = this.nominalBounds.height * sy;
+		mat.tx/=dp;mat.ty/=dp; mat.a/=(dp*sx);mat.b/=(dp*sx);mat.c/=(dp*sy);mat.d/=(dp*sy);
+		this._element.setProperty('transform-origin', this.regX + 'px ' + this.regY + 'px');
+		var x = (mat.tx + this.regX*mat.a + this.regY*mat.c - this.regX);
+		var y = (mat.ty + this.regX*mat.b + this.regY*mat.d - this.regY);
+		var tx = 'matrix(' + mat.a + ',' + mat.b + ',' + mat.c + ',' + mat.d + ',' + x + ',' + y + ')';
+		this._element.setProperty('transform', tx);
+		this._element.setProperty('width', w);
+		this._element.setProperty('height', h);
+		this._element.update();
+	}
+}
+function _tick(evt) {
+	var stage = this.stage;
+	stage&&stage.on('drawend', this._handleDrawEnd, this, true);
+	if(!this._updateVisibilityCbk) {
+		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
+	}
+}
+function _componentDraw(ctx) {
+	if(this._element && !this._element._attached) {
+		this._element.attach($('#dom_overlay_container'));
+		this.dispatchEvent('attached');
+	}
+}
+an.handleSoundStreamOnTick = function(event) {
+	if(!event.paused){
+		var stageChild = stage.getChildAt(0);
+		if(!stageChild.paused || stageChild.ignorePause){
+			stageChild.syncStreamSounds();
+		}
+	}
+}
+an.handleFilterCache = function(event) {
+	if(!event.paused){
+		var target = event.target;
+		if(target){
+			if(target.filterCacheList){
+				for(var index = 0; index < target.filterCacheList.length ; index++){
+					var cacheInst = target.filterCacheList[index];
+					if((cacheInst.startFrame <= target.currentFrame) && (target.currentFrame <= cacheInst.endFrame)){
+						cacheInst.instance.cache(cacheInst.x, cacheInst.y, cacheInst.w, cacheInst.h);
+					}
+				}
+			}
+		}
+	}
+}
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
+</script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("84287BB20D864EDDBDE84934698B6EDF");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	dom_overlay_container.style.display = canvas.style.display = 'block';
+	exportRoot = new lib.動画インラインサンプル();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,preloaderDiv,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:1179px; height:2556px">
+		<canvas id="canvas" width="1179" height="2556" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1179px; height:2556px; position: absolute; left: 0px; top: 0px; display: none;">
+		</div>
+	</div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:2556px; width: 1179px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif style='vertical-align: middle; max-height: 100%'/></div>
+</body>
+</html>
