@@ -7,6 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="iphone-inline-video.js"></script>
 	<link rel="stylesheet" href="style.css">
+	    <script>
+        function sendTapEvent() {
+            if (window.ReactNativeWebView) {
+                window.ReactNativeWebView.postMessage('tap');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.body.addEventListener('touchstart', sendTapEvent);
+        });
+    </script>
+
 </head>
 <body>
 	<h2>
