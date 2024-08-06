@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>共有されたアイテム</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EBEBEB;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffffff;
+            margin: 2px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li a {
+            display: block;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 15px;
+            color: #444444;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        li a:hover {
+            background-color: #f1f1f1;
+        }
+
+        #search {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+        }
+
+        .sort-options {
+    margin-bottom: 10px;
+    text-align: right;
+        }
+
+        .sort-options select {
+    padding: 10px;
+    cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>共有されたアイテム</h3>
+        <h5>このメニューは「3本指長押し」→「Reload」で表示</h5>
+        <input type="text" id="search" placeholder="検索...">
+        <div class="sort-options">
+            <label for="sortMethod">ソート方法:</label>
+            <select id="sortMethod">
+                <option value="dateAsc">⏬ 修正日が新しい順</option>
+                <option value="dateDesc">⏫ 修正日が古い順</option>
+                <option value="nameAsc">⏬ アルファベット順</option>
+                <option value="nameDesc">⏫ 逆アルファベット順</option>
+            </select>
+        </div>
+        <ul id="itemList">
+
+            <li data-date="2024-08-06T15:17:31Z"><a href="movLyaer_sample/movLyaer_sample.html">動画レイヤー サンプル</a></li>
+            <li data-date="2024-08-06T15:17:30Z"><a href="swipe_sample/swipe_sample.html">スワイプ サンプル</a></li>
+            <li data-date="2024-08-06T15:17:29Z"><a href="map_sample/map_sample.html">マップアプリ サンプル</a></li>
+            <li data-date="2024-08-06T15:17:28Z"><a href="mov_sample/mov_sample.html">動画再生 サンプル</a></li>
+            <li data-date="2024-08-06T15:17:27Z"><a href="input_sample/input_sample.html">フリック入力 サンプル</a></li>
+            <li data-date="2024-08-06T15:17:26Z"><a href="tuyakusin_sample/tuyakusin_sample.html">着信画面 サンプル</a></li>
+            <li data-date="2024-08-06T15:17:25Z"><a href="scroll_sample/scroll_sample.html">スクロール画面 サンプル</a></li>
+            <li data-date="2024-08-06T15:17:24Z"><a href="">（以下はテスト中）</a></li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var links = document.querySelectorAll('ul li a');
+            links.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (href) {
+                    var timestamp = new Date().getTime();
+                    link.setAttribute('href', href + "?timestamp=" + timestamp);
+                }
+            });
+
+            var searchInput = document.getElementById('search');
+            var itemList = document.getElementById('itemList');
+            var items = Array.from(itemList.getElementsByTagName('li'));
+            var sortMethod = document.getElementById('sortMethod');
+
+            searchInput.addEventListener('input', function () {
+                var searchText = searchInput.value.toLowerCase();
+                items.forEach(function (item) {
+                    var text = item.textContent.toLowerCase();
+                    if (text.indexOf(searchText) > -1) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+
+            sortMethod.addEventListener('change', function () {
+                var method = sortMethod.value;
+                sortItems(method);
+            });
+
+            function sortItems(method) {
+                items.sort(function (a, b) {
+                    var textA = a.textContent.toLowerCase();
+                    var textB = b.textContent.toLowerCase();
+                    var dateA = new Date(a.getAttribute('data-date'));
+                    var dateB = new Date(b.getAttribute('data-date'));
+
+                    switch (method) {
+                        case 'nameAsc':
+                            return textA.localeCompare(textB);
+                        case 'nameDesc':
+                            return textB.localeCompare(textA);
+                        case 'dateAsc':
+                            return dateB - dateA;
+                        case 'dateDesc':
+                            return dateA - dateB;
+                        default:
+                            return 0;
+                    }
+                });
+
+                itemList.innerHTML = '';
+                items.forEach(function (item) {
+                    itemList.appendChild(item);
+                });
+            }
+
+            // 初期ロード時にソートを実行
+            sortItems(sortMethod.value);
+
+        });
+    </script>
+</body>
+
+</html>
