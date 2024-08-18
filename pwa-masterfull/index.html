@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<title>PWA Sample</title>
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    touch-action: none; /* タッチイベントをキャンバス上で処理するため */
+    padding: env(safe-area-inset); /* セーフエリアインセットを考慮する */
+    box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+// ServiceWorker登録：https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ja
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+    });
+}
+
+// drawer.js の内容をここに移動
+var drawing = false;
+var last_x = null;
+var last_y = null;
+var canvas = document.getElementById('stage');
+var ctx = canvas.getContext('2d');
+
+function resize() {
+    canvas.width = window.innerWidth * 2;
+    canvas.height = window.innerHeight * 2;
+    ctx.scale(2, 2);
+    drawInitialText();
+}
+
+function drawInitialText() {
+    ctx.font = '30px serif';
+    ctx.fillText('PWAサンプルアプリ', 20, 40);
+    ctx.font = '25px serif';
+    ctx.fillText('マウスや指タッチで線が描けるよ！', 15, 80);
+}
+
+resize();
+window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', resize);
+
+canvas.addEventListener('mousedown', drawStart, false);
+canvas.addEventListener('touchstart', drawStart, false);
+
+function drawStart(event) {
+    event.preventDefault();
+    drawing = true;
+    var touch = event.type === 'touchstart' ? event.changedTouches[0] : event;
+    last_x = touch.pageX;
+    last_y = touch.pageY;
+}
+
+canvas.addEventListener('mousemove', drawLine, false);
+canvas.addEventListener('touchmove', drawLine, false);
+
+function drawLine(event) {
+    if (!drawing) return;
+    var touch = event.type === 'touchmove' ? event.changedTouches[0] : event;
+    ctx.strokeStyle = 'rgb(' +
+        Math.floor(Math.random() * 255) + ',' +
+        Math.floor(Math.random() * 255) + ',' +
+        Math.floor(Math.random() * 255) + ')';
+    ctx.beginPath();
+    ctx.moveTo(last_x, last_y);
+    ctx.lineTo(touch.pageX, touch.pageY);
+    ctx.stroke();
+    ctx.closePath();
+    last_x = touch.pageX;
+    last_y = touch.pageY;
+}
+
+canvas.addEventListener('mouseup', drawFinish, false);
+canvas.addEventListener('touchend', drawFinish, false);
+
+function drawFinish() {
+    drawing = false;
+}
+</script>
+</body>
+</html>
