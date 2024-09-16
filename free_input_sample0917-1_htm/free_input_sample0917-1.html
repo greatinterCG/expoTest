@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>free_input_sample0917-1</title>
+<!-- write your code here -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<style>
+    body {
+        background-color: #000000;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Standard */
+        margin: 0; /* デフォルトのマージンを削除 */
+    }
+</style>
+<script>
+    function sendTapEvent() {
+        if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage('tap');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.body.addEventListener('touchstart', sendTapEvent);
+
+        // _preload_div_ のスタイルを変更する
+        const preloadDiv = document.getElementById('_preload_div_');
+        if (preloadDiv) {
+            preloadDiv.style.display = 'flex';
+            preloadDiv.style.justifyContent = 'center';
+            preloadDiv.style.alignItems = 'center';
+            preloadDiv.style.width = '100vw'; // ビューポートの幅に合わせる
+            preloadDiv.style.height = '100vh'; // ビューポートの高さに合わせる
+        }
+
+        const preloadImg = preloadDiv.querySelector('img');
+        if (preloadImg) {
+            preloadImg.style.maxWidth = '100%'; // 画像の最大幅を設定
+            preloadImg.style.maxHeight = '100%'; // 画像の最大高さを設定
+        }
+    });
+</script>
+<style>
+  #animation_container, #_preload_div_ {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+</style>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+(function (cjs, an) {
+var p; // shortcut to reference prototypes
+var lib={};var ss={};var img={};
+lib.ssMetadata = [
+		{name:"free_input_sample0917_1_atlas_1", frames: [[0,916,1656,502],[0,1420,1279,598],[0,0,1653,914]]},
+		{name:"free_input_sample0917_1_atlas_2", frames: [[0,0,1656,446],[0,448,1082,538],[0,988,1584,280],[0,1270,563,590],[565,1270,563,590],[1130,1270,563,590]]},
+		{name:"free_input_sample0917_1_atlas_3", frames: [[1130,0,901,174],[0,592,1496,158],[1498,318,80,34],[0,894,1324,48],[0,752,1570,140],[1130,176,696,140],[0,0,563,590],[565,0,563,590]]}
+];
+(lib.AnMovieClip = function(){
+	this.actionFrames = [];
+	this.ignorePause = false;
+	this.gotoAndPlay = function(positionOrLabel){
+		cjs.MovieClip.prototype.gotoAndPlay.call(this,positionOrLabel);
+	}
+	this.play = function(){
+		cjs.MovieClip.prototype.play.call(this);
+	}
+	this.gotoAndStop = function(positionOrLabel){
+		cjs.MovieClip.prototype.gotoAndStop.call(this,positionOrLabel);
+	}
+	this.stop = function(){
+		cjs.MovieClip.prototype.stop.call(this);
+	}
+}).prototype = p = new cjs.MovieClip();
+// symbols:
+(lib.CachedBmp_212 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_211 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_1"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_9 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_210 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_22 = function() {
+	this.initialize(img.CachedBmp_22);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1544,3105);
+(lib.CachedBmp_21 = function() {
+	this.initialize(img.CachedBmp_21);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1656,3584);
+(lib.CachedBmp_29 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_1"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_28 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_18 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_1"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_5 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_209 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_3 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_2 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+(lib.CachedBmp_1 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+(lib.Image = function() {
+	this.initialize(img.Image);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2480,3508);
+(lib.Image_1 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+(lib.Image_2 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+(lib.Image_3 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_2"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+(lib.Image_1_1 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(6);
+}).prototype = p = new cjs.Sprite();
+(lib.Image_1_2 = function() {
+	this.initialize(ss["free_input_sample0917_1_atlas_3"]);
+	this.gotoAndStop(7);
+}).prototype = p = new cjs.Sprite();
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.シンボル1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.instance = new lib.CachedBmp_212();
+	this.instance.setTransform(0,13.8,0.5,0.5);
+	this.instance_1 = new lib.Image_3();
+	this.instance_1.setTransform(2,0,0.243,0.243);
+	this.instance_2 = new lib.CachedBmp_211();
+	this.instance_2.setTransform(0,15.3,0.5,0.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.シンボル1, new cjs.Rectangle(0,0,828,266.3), null);
+(lib.Group_2 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("Eg7GALGQhSAAg5g6Qg5g5gBhSIAAwBQABhSA5g6QA5g5BSAAMB2MAAAQBSAAA6A5QA5A6AABSIAAQBQAABSg5A5Qg6A6hSAAg");
+	this.shape.setTransform(397.95,71.025);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.Group_2, new cjs.Rectangle(0,0,795.9,142.1), null);
+(lib.ClipGroup = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("EhArCMAMAAAkX/MCBXAAAMAAAEX/g");
+	mask.setTransform(633.425,896);
+	// レイヤー_3
+	this.instance = new lib.Image();
+	this.instance.setTransform(0,0,0.5108,0.5108);
+	var maskedShapeInstanceList = [this.instance];
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.ClipGroup, new cjs.Rectangle(219.5,0,827.9000000000001,1791.9), null);
+(lib.Rectangle_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#FFFFFF").ss(1.7).p("ADqhHQAAgTgOgOQgNgNgTAAIl3AAQgTAAgOANQgNAOAAATIAACPQAAATANAOQAOANATAAIF3AAQATAAANgNQAOgOAAgTg");
+	this.shape.setTransform(24.25,12.675);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.Rectangle_1, new cjs.Rectangle(-0.1,-0.1,48.800000000000004,25.6), null);
+(lib.Path = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgYgzQAVAAANAPQAPAPAAAVQAAAVgPAQQgNAPgVAAg");
+	this.shape.setTransform(2.475,5.225);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.Path, new cjs.Rectangle(0,0,5,10.5), null);
+(lib.ボタン = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	// レイヤー_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("rgba(120,197,244,0.008)").s().p("EhcGAT9MAAAgn5MC4NAAAMAAAAn5g");
+	this.shape.setTransform(589.5,127.65);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	this._renderFirstFrame();
+}).prototype = getMCSymbolPrototype(lib.ボタン, new cjs.Rectangle(0,0,1179,255.4), null);
+// stage content:
+(lib.任意入力_サンプルfree_input_sample09171 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {start:0,comment:30,select:34,reset:35};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+	this.actionFrames = [1,4,5,24,30,34,35];
+	// timeline functions:
+	this.frame_1 = function() {
+		this.stop();
+		var _this = this;
+		// Enable touch on mobile
+		createjs.Touch.enable(stage, false, true);
+		// Enable tap and disable 3-finger long press on Expo
+		stage.preventSelection = true;
+		// Set z-index for video player
+		var dom_container = document.getElementById("dom_overlay_container");
+		dom_container.style.zIndex = -1;
+		// イベントリスナー関数を定義
+		_this.clickHandler = function () {
+		    var frameNumber = _this.currentFrame;
+		    _this.gotoAndStop(frameNumber + 1);
+		};
+		// クリックイベントリスナーを追加
+		stage.on('click', _this.clickHandler);
+		this.movieClip_1.addEventListener("click", fl_ClickToGoToAndStopAtFrame.bind(this));
+		function fl_ClickToGoToAndStopAtFrame() {
+		    this.gotoAndStop("select");
+		}
+	}
+	this.frame_4 = function() {
+		this.stop();
+		var _this = this;
+		this.inputText;
+		// クリックイベントリスナーを削除する場合
+		stage.removeAllEventListeners("click");
+		// Create a DIV layer above the canvas
+		// Accepts ID, X, Y, width, height, HTML content, and CSS styling (optional)
+		// CSS styling is a CSS-formatted literal string
+		mkDiv = function (id, x, y, w, h, html, textDivCss, textAreaCss) {
+			var d = document.createElement("div");
+			d.id = id;
+			d.style.cssText = "position:absolute; left:" + x + "%; top:" + y + "%; width:" + w + "%; height:" + h + "%; overflow:auto; display: flex; align-items: flex-end;" + (textDivCss ? textDivCss : "");
+			d.innerHTML = html;
+			canvas.parentNode.appendChild(d);
+			// テキストエリアのスタイルを設定
+			var textarea = d.querySelector("textarea");
+			if (textarea) {
+				textarea.style.cssText = textAreaCss ? textAreaCss : "";
+				textarea.style.overflow = "hidden"; // スクロールバーを非表示にする
+				// テキストエリアの高さを動的に調整する関数
+				var adjustHeight = function () {
+					textarea.style.height = "auto";
+					textarea.style.height = textarea.scrollHeight + "px";
+				};
+				// フォーカスをあてる
+				//textarea.focus();
+				// 初期高さの調整
+				adjustHeight();
+				// 入力時に高さを調整
+				textarea.addEventListener("input", adjustHeight);
+				// フォーカスが外れた時に入力されたテキストを表示
+				textarea.addEventListener("blur", function () {
+					_this.inputText = textarea.value;
+					console.log("commentText。", _this.inputText);
+					exportRoot.gotoAndStop("comment");
+				});
+			}
+		}
+		// Remove an element by ID name
+		rmDiv = function (id) {
+			try {
+				var elem = document.getElementById(id);
+				elem.parentNode.removeChild(elem);
+			} catch (e) {}
+		}
+		// 使用例
+		mkDiv(
+			"myInputDiv", 15, 45, 70, 10,
+			"<textarea id='myInput' rows='1' cols='32'></textarea>",
+			"background:none;",
+			"font-size:1.25rem; background:none; resize:none; border: 0px solid white;-webkit-border-radius : 0;-webkit-appearance : none;-webkit-tap-highlight-color : rgba(0,0,0,0);"
+		);
+		// クリックやタップイベントでフォーカスを設定
+		var textarea = document.getElementById("myInput");
+		document.getElementById("myInputDiv").addEventListener("click", function () {
+			if (textarea) {
+				textarea.focus(); // フォーカスを設定
+			}
+		});
+		this.inputbutton.addEventListener("click", fl_ClickToGoToAndPlayFromFrame.bind(this));
+		function fl_ClickToGoToAndPlayFromFrame() {
+			var textarea = document.getElementById("myInput");
+			if (textarea) {
+				textarea.focus(); // フォーカスを設定
+			}
+			this.play();
+		}
+	}
+	this.frame_5 = function() {
+		this.play();
+	}
+	this.frame_24 = function() {
+		this.stop();
+	}
+	this.frame_30 = function() {
+		this.stop();
+		var _this = this;
+		rmDiv("myInputDiv");
+		this.commentText.text = this.inputText;
+	}
+	this.frame_34 = function() {
+		this.stop();
+		this.movieClip_2.addEventListener("click", fl_ClickToGoToAndStopAtFrame_5.bind(this));
+		function fl_ClickToGoToAndStopAtFrame_5() {
+			// ブラウザ リロード
+			window.location.reload();
+		}
+		this.movieClip_3.addEventListener("click", fl_ClickToGoToAndStopAtFrame_6.bind(this));
+		function fl_ClickToGoToAndStopAtFrame_6() {
+			this.gotoAndStop("reset");
+		}
+	}
+	this.frame_35 = function() {
+		this.stop();
+		//タップ無効、expo3本指長押し有効
+		stage.preventSelection = false;
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(1).call(this.frame_1).wait(3).call(this.frame_4).wait(1).call(this.frame_5).wait(19).call(this.frame_24).wait(6).call(this.frame_30).wait(4).call(this.frame_34).wait(1).call(this.frame_35).wait(3));
+	// toリセットボタン
+	this.movieClip_1 = new lib.ボタン();
+	this.movieClip_1.name = "movieClip_1";
+	this.movieClip_1.setTransform(0,0.05,0.7023,1);
+	this.timeline.addTween(cjs.Tween.get(this.movieClip_1).to({_off:true},34).wait(4));
+	// リセットメッセージ
+	this.instance = new lib.CachedBmp_1();
+	this.instance.setTransform(34.45,920.45,0.5,0.5);
+	this.instance._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(35).to({_off:false},0).wait(3));
+	// セレクトボタン
+	this.movieClip_3 = new lib.ボタン();
+	this.movieClip_3.name = "movieClip_3";
+	this.movieClip_3.setTransform(414,1061.75,0.7023,0.7023,0,0,0,589.5,127.7);
+	this.movieClip_2 = new lib.ボタン();
+	this.movieClip_2.name = "movieClip_2";
+	this.movieClip_2.setTransform(414,632.55,0.7023,0.7023,0,0,0,589.5,127.7);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.movieClip_2},{t:this.movieClip_3}]},34).to({state:[]},1).wait(3));
+	// セレクトテキスト
+	this.instance_1 = new lib.CachedBmp_3();
+	this.instance_1.setTransform(20.35,1028.75,0.5,0.5);
+	this.instance_2 = new lib.CachedBmp_2();
+	this.instance_2.setTransform(228.75,596.1,0.5,0.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_2},{t:this.instance_1}]},34).to({state:[]},1).wait(3));
+	// セレクトベース
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,1,1).p("EhArgviMCBXAAAIAAcCMiBXAAAgEhArAThMCBXAAAIAAcCMiBXAAAg");
+	this.shape.setTransform(414,847.125);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#666666").s().p("EhArAvjIAA8CMCBXAAAIAAcCgEhArgTgIAA8CMCBXAAAIAAcCg");
+	this.shape_1.setTransform(414,847.125);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1},{t:this.shape}]},34).to({state:[]},1).wait(3));
+	// コメント入力ボタン
+	this.inputbutton = new lib.ボタン();
+	this.inputbutton.name = "inputbutton";
+	this.inputbutton.setTransform(0,517.55,0.7023,1);
+	this.inputbutton._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.inputbutton).wait(4).to({_off:false},0).to({_off:true},1).wait(33));
+	// レイヤー_3
+	this.text = new cjs.Text("Click here", "41px 'A P-OTF A1Gothic StdN M'", "#FF0000");
+	this.text.lineHeight = 57;
+	this.text.lineWidth = 347;
+	this.text.parent = this;
+	this.text.setTransform(231.65,635.1);
+	this.text._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(4).to({_off:false},0).to({_off:true},1).wait(33));
+	// ステータス
+	this.instance_3 = new lib.Path();
+	this.instance_3.setTransform(788.55,49.3,1,1,0,0,0,2.5,5.2);
+	this.instance_3.alpha = 0.5;
+	this.instance_4 = new lib.CachedBmp_5();
+	this.instance_4.setTransform(739.3,40.95,0.5,0.5);
+	this.instance_5 = new lib.Rectangle_1();
+	this.instance_5.setTransform(759.2,49.35,1,1,0,0,0,24.2,12.7);
+	this.instance_5.alpha = 0.5;
+	this.instance_6 = new lib.CachedBmp_209();
+	this.instance_6.setTransform(63.45,37.5,0.5,0.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3}]}).to({state:[]},31).wait(7));
+	// コメントテキスト
+	this.commentText = new cjs.Text("連絡ありがとう\nあああ\nあああ", "28px 'Helvetica'", "#6F6F6F");
+	this.commentText.name = "commentText";
+	this.commentText.lineHeight = 48;
+	this.commentText.lineWidth = 564;
+	this.commentText.parent = this;
+	this.commentText.setTransform(189.1,643.25);
+	this.commentText._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.commentText).wait(30).to({_off:false},0).to({_off:true},1).wait(7));
+	// コメント02
+	this.instance_7 = new lib.CachedBmp_29();
+	this.instance_7.setTransform(142.85,515.85,0.5,0.5);
+	this.instance_8 = new lib.Image_2();
+	this.instance_8.setTransform(14,844,0.1581,0.1581);
+	this.instance_9 = new lib.CachedBmp_28();
+	this.instance_9.setTransform(39.95,879.6,0.5,0.5);
+	this.instance_10 = new lib.Image_1_2();
+	this.instance_10.setTransform(94,572,0.1581,0.1581);
+	this.instance_11 = new lib.CachedBmp_18();
+	this.instance_11.setTransform(-0.25,560.85,0.5,0.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_11},{t:this.instance_10},{t:this.instance_9},{t:this.instance_8},{t:this.instance_7}]},30).to({state:[]},1).wait(7));
+	// 打ち込み欄
+	this.instance_12 = new lib.シンボル1();
+	this.instance_12.setTransform(413.9,1917.05,1,1,0,0,0,413.9,133.2);
+	this.instance_12._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(5).to({_off:false},0).wait(1).to({regX:414,x:414,y:1617},0).wait(1).to({y:1424.55},0).wait(1).to({y:1287.3},0).wait(1).to({y:1184.45},0).wait(1).to({y:1105.15},0).wait(1).to({y:1042.85},0).wait(1).to({y:993.3},0).wait(1).to({y:953.35},0).wait(1).to({y:920.85},0).wait(1).to({y:894},0).wait(1).to({y:871.45},0).wait(1).to({y:860.25},0).wait(13).to({_off:true},1).wait(7));
+	// コメント
+	this.instance_13 = new lib.CachedBmp_22();
+	this.instance_13.setTransform(26.95,187,0.5,0.5);
+	this.instance_14 = new lib.Image_1();
+	this.instance_14.setTransform(13.5,573.1,0.1581,0.1581);
+	this.instance_15 = new lib.Image_1_1();
+	this.instance_15.setTransform(668.25,1596.7,0.24,0.24);
+	this.instance_16 = new lib.CachedBmp_21();
+	this.instance_16.setTransform(0,0,0.5,0.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_16},{t:this.instance_15},{t:this.instance_14},{t:this.instance_13}]},4).to({state:[]},27).wait(7));
+	// 通知
+	this.instance_17 = new lib.CachedBmp_210();
+	this.instance_17.setTransform(47.85,1586.3,0.5,0.5);
+	this.instance_18 = new lib.Group_2();
+	this.instance_18.setTransform(413.95,1630.15,1,1,0,0,0,397.9,71);
+	this.instance_18.alpha = 0.8008;
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_18},{t:this.instance_17}]},3).to({state:[]},28).wait(7));
+	// 待ち受け
+	this.instance_19 = new lib.CachedBmp_9();
+	this.instance_19.setTransform(146.5,176.5,0.5,0.5);
+	this.instance_20 = new lib.ClipGroup();
+	this.instance_20.setTransform(413.95,896,1,1,0,0,0,633.4,896);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_20},{t:this.instance_19}]},2).to({state:[]},29).wait(7));
+	// 黒画面
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("EhArCMAMAAAkX/MCBXAAAMAAAEX/g");
+	this.shape_2.setTransform(413.975,896);
+	this.timeline.addTween(cjs.Tween.get(this.shape_2).to({_off:true},31).wait(7));
+	this._renderFirstFrame();
+}).prototype = p = new lib.AnMovieClip();
+p.nominalBounds = new cjs.Rectangle(194.6,896,852.8000000000001,1154.1999999999998);
+// library properties:
+lib.properties = {
+	id: '84287BB20D864EDDBDE84934698B6EDF',
+	width: 828,
+	height: 1792,
+	fps: 30,
+	color: "#FFFFFF",
+	opacity: 0.00,
+	manifest: [
+		{src:"images/CachedBmp_22.png", id:"CachedBmp_22"},
+		{src:"images/CachedBmp_21.png", id:"CachedBmp_21"},
+		{src:"images/Image.png", id:"Image"},
+		{src:"images/free_input_sample0917_1_atlas_1.png", id:"free_input_sample0917_1_atlas_1"},
+		{src:"images/free_input_sample0917_1_atlas_2.png", id:"free_input_sample0917_1_atlas_2"},
+		{src:"images/free_input_sample0917_1_atlas_3.png", id:"free_input_sample0917_1_atlas_3"}
+	],
+	preloads: []
+};
+// bootstrap callback support:
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+an.compositions = an.compositions || {};
+an.compositions['84287BB20D864EDDBDE84934698B6EDF'] = {
+	getStage: function() { return exportRoot.stage; },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+	var lastW, lastH, lastS=1;		
+	window.addEventListener('resize', resizeCanvas);		
+	resizeCanvas();		
+	function resizeCanvas() {			
+		var w = lib.properties.width, h = lib.properties.height;			
+		var iw = window.innerWidth, ih=window.innerHeight;			
+		var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+		if(isResp) {                
+			if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+				sRatio = lastS;                
+			}				
+			else if(!isScale) {					
+				if(iw<w || ih<h)						
+					sRatio = Math.min(xRatio, yRatio);				
+			}				
+			else if(scaleType==1) {					
+				sRatio = Math.min(xRatio, yRatio);				
+			}				
+			else if(scaleType==2) {					
+				sRatio = Math.max(xRatio, yRatio);				
+			}			
+		}
+		domContainers[0].width = w * pRatio * sRatio;			
+		domContainers[0].height = h * pRatio * sRatio;
+		domContainers.forEach(function(container) {				
+			container.style.width = w * sRatio + 'px';				
+			container.style.height = h * sRatio + 'px';			
+		});
+		stage.scaleX = pRatio*sRatio;			
+		stage.scaleY = pRatio*sRatio;
+		lastW = iw; lastH = ih; lastS = sRatio;            
+		stage.tickOnUpdate = false;            
+		stage.update();            
+		stage.tickOnUpdate = true;		
+	}
+}
+an.handleSoundStreamOnTick = function(event) {
+	if(!event.paused){
+		var stageChild = stage.getChildAt(0);
+		if(!stageChild.paused || stageChild.ignorePause){
+			stageChild.syncStreamSounds();
+		}
+	}
+}
+an.handleFilterCache = function(event) {
+	if(!event.paused){
+		var target = event.target;
+		if(target){
+			if(target.filterCacheList){
+				for(var index = 0; index < target.filterCacheList.length ; index++){
+					var cacheInst = target.filterCacheList[index];
+					if((cacheInst.startFrame <= target.currentFrame) && (target.currentFrame <= cacheInst.endFrame)){
+						cacheInst.instance.cache(cacheInst.x, cacheInst.y, cacheInst.w, cacheInst.h);
+					}
+				}
+			}
+		}
+	}
+}
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
+</script>
+<script>
+// Global Scripts
+	/*! npm.im/iphone-inline-video 2.2.2 */
+var enableInlineVideo = (function () {
+'use strict';
+/*! npm.im/intervalometer */
+function intervalometer(cb, request, cancel, requestParameter) {
+	var requestId;
+	var previousLoopTime;
+	function loop(now) {
+		// must be requested before cb() because that might call .stop()
+		requestId = request(loop, requestParameter);
+		// called with "ms since last call". 0 on start()
+		cb(now - (previousLoopTime || now));
+		previousLoopTime = now;
+	}
+	return {
+		start: function start() {
+			if (!requestId) { // prevent double starts
+				loop(0);
+			}
+		},
+		stop: function stop() {
+			cancel(requestId);
+			requestId = null;
+			previousLoopTime = 0;
+		}
+	};
+}
+function frameIntervalometer(cb) {
+	return intervalometer(cb, requestAnimationFrame, cancelAnimationFrame);
+}
+function preventEvent(element, eventName, test) {
+	function handler(e) {
+		if (!test || test(element, eventName)) {
+			e.stopImmediatePropagation();
+			// // console.log(eventName, 'prevented on', element);
+		}
+	}
+	element.addEventListener(eventName, handler);
+	// Return handler to allow to disable the prevention. Usage:
+	// const preventionHandler = preventEvent(el, 'click');
+	// el.removeEventHandler('click', preventionHandler);
+	return handler;
+}
+function proxyProperty(object, propertyName, sourceObject, copyFirst) {
+	function get() {
+		return sourceObject[propertyName];
+	}
+	function set(value) {
+		sourceObject[propertyName] = value;
+	}
+	if (copyFirst) {
+		set(object[propertyName]);
+	}
+	Object.defineProperty(object, propertyName, {get: get, set: set});
+}
+function proxyEvent(object, eventName, sourceObject) {
+	sourceObject.addEventListener(eventName, function () { return object.dispatchEvent(new Event(eventName)); });
+}
+function dispatchEventAsync(element, type) {
+	Promise.resolve().then(function () {
+		element.dispatchEvent(new Event(type));
+	});
+}
+var iOS8or9 = typeof document === 'object' && 'object-fit' in document.head.style && !matchMedia('(-webkit-video-playable-inline)').matches;
+var IIV = 'bfred-it:iphone-inline-video';
+var IIVEvent = 'bfred-it:iphone-inline-video:event';
+var IIVPlay = 'bfred-it:iphone-inline-video:nativeplay';
+var IIVPause = 'bfred-it:iphone-inline-video:nativepause';
+/**
+ * UTILS
+ */
+function getAudioFromVideo(video) {
+	var audio = new Audio();
+	proxyEvent(video, 'play', audio);
+	proxyEvent(video, 'playing', audio);
+	proxyEvent(video, 'pause', audio);
+	audio.crossOrigin = video.crossOrigin;
+	// 'data:' causes audio.networkState > 0
+	// which then allows to keep <audio> in a resumable playing state
+	// i.e. once you set a real src it will keep playing if it was if .play() was called
+	audio.src = video.src || video.currentSrc || 'data:';
+	// // if (audio.src === 'data:') {
+	//   TODO: wait for video to be selected
+	// // }
+	return audio;
+}
+var lastRequests = [];
+var requestIndex = 0;
+var lastTimeupdateEvent;
+function setTime(video, time, rememberOnly) {
+	// Allow one timeupdate event every 200+ ms
+	if ((lastTimeupdateEvent || 0) + 200 < Date.now()) {
+		video[IIVEvent] = true;
+		lastTimeupdateEvent = Date.now();
+	}
+	if (!rememberOnly) {
+		video.currentTime = time;
+	}
+	lastRequests[++requestIndex % 3] = time * 100 | 0 / 100;
+}
+function isPlayerEnded(player) {
+	return player.driver.currentTime >= player.video.duration;
+}
+function update(timeDiff) {
+	var player = this;
+	// // console.log('update', player.video.readyState, player.video.networkState, player.driver.readyState, player.driver.networkState, player.driver.paused);
+	if (player.video.readyState >= player.video.HAVE_FUTURE_DATA) {
+		if (!player.hasAudio) {
+			player.driver.currentTime = player.video.currentTime + ((timeDiff * player.video.playbackRate) / 1000);
+			if (player.video.loop && isPlayerEnded(player)) {
+				player.driver.currentTime = 0;
+			}
+		}
+		setTime(player.video, player.driver.currentTime);
+	} else if (player.video.networkState === player.video.NETWORK_IDLE && player.video.buffered.length === 0) {
+		// This should happen when the source is available but:
+		// - it's potentially playing (.paused === false)
+		// - it's not ready to play
+		// - it's not loading
+		// If it hasAudio, that will be loaded in the 'emptied' handler below
+		player.video.load();
+		// // console.log('Will load');
+	}
+	// // console.assert(player.video.currentTime === player.driver.currentTime, 'Video not updating!');
+	if (player.video.ended) {
+		delete player.video[IIVEvent]; // Allow timeupdate event
+		player.video.pause(true);
+	}
+}
+/**
+ * METHODS
+ */
+function play() {
+	// // console.log('play');
+	var video = this;
+	var player = video[IIV];
+	// If it's fullscreen, use the native player
+	if (video.webkitDisplayingFullscreen) {
+		video[IIVPlay]();
+		return;
+	}
+	if (player.driver.src !== 'data:' && player.driver.src !== video.src) {
+		// // console.log('src changed on play', video.src);
+		setTime(video, 0, true);
+		player.driver.src = video.src;
+	}
+	if (!video.paused) {
+		return;
+	}
+	player.paused = false;
+	if (video.buffered.length === 0) {
+		// .load() causes the emptied event
+		// the alternative is .play()+.pause() but that triggers play/pause events, even worse
+		// possibly the alternative is preventing this event only once
+		video.load();
+	}
+	player.driver.play();
+	player.updater.start();
+	if (!player.hasAudio) {
+		dispatchEventAsync(video, 'play');
+		if (player.video.readyState >= player.video.HAVE_ENOUGH_DATA) {
+			// // console.log('onplay');
+			dispatchEventAsync(video, 'playing');
+		}
+	}
+}
+function pause(forceEvents) {
+	// // console.log('pause');
+	var video = this;
+	var player = video[IIV];
+	player.driver.pause();
+	player.updater.stop();
+	// If it's fullscreen, the developer the native player.pause()
+	// This is at the end of pause() because it also
+	// needs to make sure that the simulation is paused
+	if (video.webkitDisplayingFullscreen) {
+		video[IIVPause]();
+	}
+	if (player.paused && !forceEvents) {
+		return;
+	}
+	player.paused = true;
+	if (!player.hasAudio) {
+		dispatchEventAsync(video, 'pause');
+	}
+	// Handle the 'ended' event only if it's not fullscreen
+	if (video.ended && !video.webkitDisplayingFullscreen) {
+		video[IIVEvent] = true;
+		dispatchEventAsync(video, 'ended');
+	}
+}
+/**
+ * SETUP
+ */
+function addPlayer(video, hasAudio) {
+	var player = {};
+	video[IIV] = player;
+	player.paused = true; // Track whether 'pause' events have been fired
+	player.hasAudio = hasAudio;
+	player.video = video;
+	player.updater = frameIntervalometer(update.bind(player));
+	if (hasAudio) {
+		player.driver = getAudioFromVideo(video);
+	} else {
+		video.addEventListener('canplay', function () {
+			if (!video.paused) {
+				// // console.log('oncanplay');
+				dispatchEventAsync(video, 'playing');
+			}
+		});
+		player.driver = {
+			src: video.src || video.currentSrc || 'data:',
+			muted: true,
+			paused: true,
+			pause: function () {
+				player.driver.paused = true;
+			},
+			play: function () {
+				player.driver.paused = false;
+				// Media automatically goes to 0 if .play() is called when it's done
+				if (isPlayerEnded(player)) {
+					setTime(video, 0);
+				}
+			},
+			get ended() {
+				return isPlayerEnded(player);
+			}
+		};
+	}
+	// .load() causes the emptied event
+	video.addEventListener('emptied', function () {
+		// // console.log('driver src is', player.driver.src);
+		var wasEmpty = !player.driver.src || player.driver.src === 'data:';
+		if (player.driver.src && player.driver.src !== video.src) {
+			// // console.log('src changed to', video.src);
+			setTime(video, 0, true);
+			player.driver.src = video.src;
+			// Playing videos will only keep playing if no src was present when .play()’ed
+			if (wasEmpty || (!hasAudio && video.autoplay)) {
+				player.driver.play();
+			} else {
+				player.updater.stop();
+			}
+		}
+	}, false);
+	// Stop programmatic player when OS takes over
+	video.addEventListener('webkitbeginfullscreen', function () {
+		if (!video.paused) {
+			// Make sure that the <audio> and the syncer/updater are stopped
+			video.pause();
+			// Play video natively
+			video[IIVPlay]();
+		} else if (hasAudio && player.driver.buffered.length === 0) {
+			// If the first play is native,
+			// the <audio> needs to be buffered manually
+			// so when the fullscreen ends, it can be set to the same current time
+			player.driver.load();
+		}
+	});
+	if (hasAudio) {
+		video.addEventListener('webkitendfullscreen', function () {
+			// Sync audio to new video position
+			player.driver.currentTime = video.currentTime;
+			// // console.assert(player.driver.currentTime === video.currentTime, 'Audio not synced');
+		});
+		// Allow seeking
+		video.addEventListener('seeking', function () {
+			if (lastRequests.indexOf(video.currentTime * 100 | 0 / 100) < 0) {
+				// // console.log('User-requested seeking');
+				player.driver.currentTime = video.currentTime;
+			}
+		});
+	}
+}
+function preventWithPropOrFullscreen(el) {
+	var isAllowed = el[IIVEvent];
+	delete el[IIVEvent];
+	return !el.webkitDisplayingFullscreen && !isAllowed;
+}
+function overloadAPI(video) {
+	var player = video[IIV];
+	video[IIVPlay] = video.play;
+	video[IIVPause] = video.pause;
+	video.play = play;
+	video.pause = pause;
+	proxyProperty(video, 'paused', player.driver);
+	proxyProperty(video, 'muted', player.driver, true);
+	proxyProperty(video, 'playbackRate', player.driver, true);
+	proxyProperty(video, 'ended', player.driver);
+	proxyProperty(video, 'loop', player.driver, true);
+	// IIV works by seeking 60 times per second.
+	// These events are now useless.
+	preventEvent(video, 'seeking', function (el) { return !el.webkitDisplayingFullscreen; });
+	preventEvent(video, 'seeked', function (el) { return !el.webkitDisplayingFullscreen; });
+	// Limit timeupdate events
+	preventEvent(video, 'timeupdate', preventWithPropOrFullscreen);
+	// Prevent occasional native ended events
+	preventEvent(video, 'ended', preventWithPropOrFullscreen);
+}
+function enableInlineVideo(video, opts) {
+	if ( opts === void 0 ) opts = {};
+	// Stop if already enabled
+	if (video[IIV]) {
+		return;
+	}
+	// Allow the user to skip detection
+	if (!opts.everywhere) {
+		// Only iOS8 and 9 are supported
+		if (!iOS8or9) {
+			return;
+		}
+		// Stop if it's not an allowed device
+		if (!(opts.iPad || opts.ipad ? /iPhone|iPod|iPad/ : /iPhone|iPod/).test(navigator.userAgent)) {
+			return;
+		}
+	}
+	// Try to pause
+	video.pause();
+	// Prevent autoplay.
+	// An non-started autoplaying video can't be .pause()'d
+	var willAutoplay = video.autoplay;
+	video.autoplay = false;
+	addPlayer(video, !video.muted);
+	overloadAPI(video);
+	video.classList.add('IIV');
+	// Autoplay
+	if (video.muted && willAutoplay) {
+		video.play();
+		video.addEventListener('playing', function restoreAutoplay() {
+			video.autoplay = true;
+			video.removeEventListener('playing', restoreAutoplay);
+		});
+	}
+	if (!/iPhone|iPod|iPad/.test(navigator.platform)) {
+		console.warn('iphone-inline-video is not guaranteed to work in emulated environments');
+	}
+}
+return enableInlineVideo;
+}());</script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("84287BB20D864EDDBDE84934698B6EDF");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	canvas.style.display = 'block';
+	exportRoot = new lib.任意入力_サンプルfree_input_sample09171();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',false,1,[canvas,preloaderDiv,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:828px; height:1792px">
+		<canvas id="canvas" width="828" height="1792" style="position: absolute; display: none; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:828px; height:1792px; position: absolute; left: 0px; top: 0px; display: none;">
+		</div>
+	</div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:1792px; width: 828px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif style='vertical-align: middle; max-height: 100%'/></div>
+</body>
+</html>
